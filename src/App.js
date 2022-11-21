@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import DevicesCard from './components/DevicesCard';
+import Home from './components/Home';
+import InformarionDevice from './components/InformarionDevice';
+import './css/App.css';
+import { useGetData } from './hook/useGetData';
 
 function App() {
+
+  const { getData } = useGetData();
+  const [nameDevice, setNameDevice] = useState("");
+  const [luz, setLuz] = useState({});
+  const [dis, setDis] = useState({});
+
+
+  const getInfotmation = async (device) => {
+    setLuz(await getData(device, "iluminacion"))
+    setDis(await getData(device, "distancia"))
+    setNameDevice(device);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Header /> */}
+      <div className='Container'>
+        <Home />
+        <DevicesCard getInfotmation={getInfotmation} />
+        {nameDevice !== "" &&
+          <div className='infoDevice'>
+            <InformarionDevice name_device={nameDevice} luz={luz} dis={dis} />
+          </div>
+        }
+      </div>
     </div>
   );
 }

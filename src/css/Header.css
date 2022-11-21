@@ -1,0 +1,15 @@
+.Header {
+    height: 3em;
+    margin: 0 5px;
+    padding: 1em 0;
+    border-bottom: 1px solid #426CB0;
+}
+
+.Header .img-logo {
+    width: 4em;
+    margin-left: 2em;
+}
+
+.Header .img-logo img {
+    width: 100%;
+}

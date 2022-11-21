@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Regular";
+  src: url('./fonts/Poppins-Regular.ttf');
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Regular';
+  color: #f3f3f3;
+  background: #131313;
+}
+
+.Container{
+  padding: 0 7em;
+}
+
+.infoDevice{
+  margin: 5em 0;
+}
+
+.App{
+  margin: 3em 0;
+}

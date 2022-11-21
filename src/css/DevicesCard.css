@@ -1,0 +1,31 @@
+.Devives {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.DevicesCard {
+    width: 30%;
+    padding: 3em 1em;
+    color: #263238;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.DevicesCard:nth-child(1) {
+    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+}
+
+.DevicesCard:nth-child(2) {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+.DevicesCard h1 {
+    margin: 5px;
+    font-size: 4em;
+}
+
+.DevicesCard h3,
+.DevicesCard h6 {
+    margin: 0px;
+}

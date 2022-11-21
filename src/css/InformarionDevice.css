@@ -1,0 +1,73 @@
+.tarjetas {
+    display: flex;
+    justify-content: space-around;
+    /* border-top: 1px solid #426CB0; */
+}
+
+.InformarionDevice .name_device {
+    text-align: center;
+    font-size: 3em;
+}
+
+.tarjetas .DevicesCard {
+    width: 20%;
+    padding: 2em 1em;
+    color: #263238;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.tarjetas .DevicesCard.ESP32 {
+    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+}
+
+.tarjetas .DevicesCard.device_http {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+.InformarionDevice h1.ESP32 {
+    background: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.InformarionDevice h1.device_http {
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.DevicesCard h1 {
+    font-size: 3em;
+}
+
+.DevicesCard h3,
+.DevicesCard h6 {
+    margin: 0px;
+}
+
+.tabla{
+    margin: 2em auto;
+    width: 70%;
+}
+
+.tabla table{
+    width: 100%;
+}
+
+.tabla table thead th{
+    font-size: 1.3em;
+    border-bottom: 1px solid #fff;
+}
+
+.tabla table td{
+    text-align: center;
+}
+
+.tabla.ESP32 table tbody tr:nth-child(2n){
+    background: #92fe9d3d;
+}
+
+.tabla.device_http table tbody tr:nth-child(2n){
+    background: #f6d4653d;
+}
