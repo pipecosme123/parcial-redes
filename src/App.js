@@ -11,11 +11,13 @@ function App() {
   const [nameDevice, setNameDevice] = useState("");
   const [luz, setLuz] = useState({});
   const [dis, setDis] = useState({});
+  const [alerta, setAlerta] = useState({});
 
 
   const getInfotmation = async (device) => {
-    setLuz(await getData(device, "iluminacion"))
-    setDis(await getData(device, "distancia"))
+    setLuz(await getData(device, "iluminacion"));
+    setDis(await getData(device, "distancia"));
+    setAlerta(await getData(device, "encendido"));
     setNameDevice(device);
   }
 
@@ -27,7 +29,7 @@ function App() {
         <DevicesCard getInfotmation={getInfotmation} />
         {nameDevice !== "" &&
           <div className='infoDevice'>
-            <InformarionDevice name_device={nameDevice} luz={luz} dis={dis} />
+            <InformarionDevice name_device={nameDevice} luz={luz} dis={dis} alerta={alerta} />
           </div>
         }
       </div>

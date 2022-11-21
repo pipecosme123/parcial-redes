@@ -1,6 +1,6 @@
 import '../css/InformarionDevice.css';
 
-const InformarionDevice = ({ name_device, luz, dis }) => {
+const InformarionDevice = ({ name_device, luz, dis, alerta }) => {
 
     const fecha = (ubidots_fecha) => {
         let newFecha = new Date(ubidots_fecha);
@@ -28,7 +28,7 @@ const InformarionDevice = ({ name_device, luz, dis }) => {
                 </div>
                 <div className={`DevicesCard ${name_device}`}>
                     <h3>ALERTA</h3>
-                    <h1>###</h1>
+                    <h1>{alerta[0].value}</h1>
                 </div>
             </div>
             <div className={`tabla ${name_device}`}>
